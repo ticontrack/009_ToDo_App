@@ -31,6 +31,7 @@ public class EnMemoriaTareasRepository implements TareasRepository {
 	public Tarea create(Tarea tarea) {
 		contadorId ++;
 		tarea.setId(contadorId);
+		tareas.put(contadorId, tarea);
 		return tarea;
 	}
 
