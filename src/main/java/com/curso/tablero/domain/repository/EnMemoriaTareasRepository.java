@@ -17,7 +17,15 @@ public class EnMemoriaTareasRepository implements TareasRepository {
 
 	private Map<Integer, Tarea> tareas = new HashMap<Integer, Tarea>();
 	
-	private static int  contadorId = 0;
+	private static int  contadorId = 2;
+	
+	EnMemoriaTareasRepository() {
+
+        tareas.put(1, new Tarea(1, "Tarea 1","Lo que sea"));
+        tareas.put(2, new Tarea(2, "Tarea 2","Lo que sea 2"));
+        
+    }
+	
 	
 	@Override
 	public Tarea create(Tarea tarea) {
